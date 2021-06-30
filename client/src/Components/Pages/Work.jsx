@@ -2,7 +2,7 @@ import React from 'react'
 
 const Work = () => {
     return (
-        <div>
+        <div style={{ textAlign:"center" }}>
             Work Page
         </div>
     )

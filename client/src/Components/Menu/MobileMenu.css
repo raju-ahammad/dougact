@@ -1,0 +1,9 @@
+.MobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.MobileMenu h2 a {
+    text-decoration: none;
+    color: #000;
+}

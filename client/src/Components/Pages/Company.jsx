@@ -2,7 +2,7 @@ import React from 'react'
 
 const Company = () => {
     return (
-        <div>
+        <div style={{ textAlign:"center" }}>
             Company Page
         </div>
     )

@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactPlayer from 'react-player';
 import videoURL from "../../Assets/Video/background.mp4"
 import "./pages.css"
 import NavMenu from '../Menu/NavMenu';
 
 const Home = () => {
+
+   
+    
     
     return (
         <div className="home">
+           
             <div className="overlay"></div>
           <ReactPlayer
             url={videoURL}
@@ -18,7 +22,7 @@ const Home = () => {
             height="100vh"
             style={{ position: "absolute "}}
             />
-            <NavMenu/>
+            <NavMenu />
         </div>
     )
 }

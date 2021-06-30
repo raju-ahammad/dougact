@@ -2,7 +2,7 @@ import React from 'react'
 
 const Blog = () => {
     return (
-        <div>
+        <div style={{ textAlign:"center" }}>
             Blog Page
         </div>
     )

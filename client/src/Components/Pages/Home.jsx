@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactPlayer from 'react-player';
 import videoURL from "../../Assets/Video/background.mp4"
 import "./pages.css"
@@ -6,9 +6,6 @@ import NavMenu from '../Menu/NavMenu';
 
 const Home = () => {
 
-   
-    
-    
     return (
         <div className="home">
            

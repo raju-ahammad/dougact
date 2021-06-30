@@ -9,7 +9,9 @@ const Home = () => {
     return (
         <div className="home">
            
-            <div className="overlay"></div>
+            <div className="overlay">
+               
+            </div>
           <ReactPlayer
             url={videoURL}
             playing

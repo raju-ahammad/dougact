@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./PopupMenu.css"
 import logo from '../../Assets/Images/LogoBlack.png'
 import MobileMenu from './MobileMenu'
+import { MyContext } from '../../App'
 
-const PopupMenu = ({classValue, closeBtn, closeBtnHandle}) => {
+
+
+const PopupMenu = () => {
+
+    const {close, closeBtnHandle, value} = useContext(MyContext)
+    console.log(close ,"Btn");
+    console.log( closeBtnHandle ,"BtnHandle");
+
     return (
-        <div className={`popup__menu ${closeBtn} ${classValue}`} >
+        <div className={`popup__menu ${close} ${value}`} >
            <div className="popup__content">
                <div className="social__sidebar">
                    <div onClick={closeBtnHandle} className="close__icon">

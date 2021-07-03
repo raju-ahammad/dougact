@@ -1,33 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Navmenu.css"
 import ScrollHorizontal from 'react-scroll-horizontal';
 import logo from '../../Assets/Images/Logo.png'
 import { Link } from 'react-router-dom';
+import WorkImage from '../../Assets/Images/WorkHome.png'
+import WorkImage2 from '../../Assets/Images/WorkHome2.png'
+import BlogImage from '../../Assets/Images/BlogHome.png'
+import BlogImage2 from '../../Assets/Images/BlogHome2.png'
+import CompanyImage from '../../Assets/Images/CompayHome.png'
+import CompanyImage2 from '../../Assets/Images/CompayHome2.png'
+
+
 
 
 const data = [
-  {text: "WORK", link:"/work"},
-  {text: "BLOG", link: "/blog"},
-  {text: "COMPANY", link: "/company"},
-  {text: "NEWS", link: "/news"},
-  {text: "NEWS", link: "/news"},
-  {text: "COMPANY", link: "/company"}
+  {image: WorkImage, image2:WorkImage2, link:"/work"},
+  {image:  BlogImage ,image2:BlogImage2, link: "/blog"},
+  {image: CompanyImage,image2: CompanyImage2, link: "/company"},
 ];
 
 
 const NavMenu = () => {
+ 
+
 
   const exampleItems = data.map((item, i) => {
     return (
       <div key={i} className="tile">
           <div className="menu__content">
-              <p>00{i+1}.</p>
-              <h2> <Link to={item.link}>{item.text}</Link> </h2>
+            <div className="regular__nav"><Link to={item.link}> <img src={item.image}  onMouseLeave={ e => e.target.src = item.image } onMouseEnter={e => e.target.src = item.image2} alt="img"/> </Link></div>
+            
           </div>
         
       </div>
     );
   });
+  
     return (
       <section className="navmenu">
           

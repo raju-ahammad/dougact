@@ -1,10 +1,13 @@
-
+img {
+  width: 100%;
+}
 .tile {
     height: 100%;
     width: 30em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;;
     align-items: center;
+    margin-left: 5%;
   }
   .tile-striped {
     background: transparent
@@ -110,3 +113,4 @@
 .scroll-horizontal div {
     z-index: 1;
 }
+

@@ -17,7 +17,7 @@ export default function LiquidBuble() {
     const handler = ({ clientX, clientY }) => set({ pos1: [clientX, clientY] })
     window.addEventListener('mousemove', handler)
     return () => window.removeEventListener('mousemove', handler)
-  }, [])
+  }, [set])
   
   return (
     <>

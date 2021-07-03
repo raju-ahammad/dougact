@@ -28,6 +28,7 @@ const WorkDetails = () => {
             if (data.id === id) {
                 setData({id: data.id, titile: data.title, description: data.description, link: data.link, image: data.image})
             }
+            return data.id
             
         })
      

@@ -4,6 +4,7 @@ import Blog from './Components/Pages/Blog'
 import Company from './Components/Pages/Company'
 import Home from './Components/Pages/Home'
 import Work from './Components/Pages/Work'
+import WorkDetails from './Components/Pages/WorkDetails'
 const Router = () => {
     return (
         <Switch>
@@ -11,6 +12,8 @@ const Router = () => {
             <Route path="/work" component={ Work } exact/>
             <Route path="/blog" component={ Blog } exact/>
             <Route path="/company" component={ Company } exact/>
+            <Route path="/work/:id" component={ WorkDetails } exact/>
+
 
         </Switch>
     )

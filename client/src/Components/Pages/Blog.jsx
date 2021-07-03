@@ -1,14 +1,15 @@
-import React, { useContext } from 'react'
-import { MyContext } from '../../App'
-
+import React from "react"
+import MeshLine from "../Animation/MeshLine"
 
 const Blog = () => {
-    const { value, close } = useContext(MyContext)
-    console.log(value, close);
+    
     return (
-        <div style={{ textAlign:"center" }}>
-            Blog Page {value} {close}
+        
+        <div>
+          Hello BLog
+          <MeshLine/>
         </div>
+        
     )
 }
 

@@ -18,3 +18,14 @@ video {
 }
 
 /* clip-path: polygon(100% 0,100% 0,100% 100%,0 100%,0 46%,0 0,100% 0,60% 83%,51% 3%,44% 3%,48% 49%,43% 97%,51% 97%,57% 46%); */
+
+canvas {
+    width: 100% !important;
+    height: 100vh !important;
+}
+.home__meshline {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    clip-path: polygon(30% 20%, 32% 83%, 71% 46%);
+}

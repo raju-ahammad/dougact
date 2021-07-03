@@ -60,13 +60,3 @@ const Work = () => {
 }
 
 export default Work
-
-
-{/* <ReactPlayer
-                                url={data.link}
-                                playing
-                                loop
-                                muted
-                                width="100%"
-                                
-                        /> */}

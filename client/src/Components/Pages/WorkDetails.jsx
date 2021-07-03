@@ -24,12 +24,14 @@ const WorkDetails = () => {
 
     useEffect(() => {
         workData.map((data) => {
+            
             if (data.id === id) {
                 setData({id: data.id, titile: data.title, description: data.description, link: data.link, image: data.image})
             }
+            
         })
      
-    }, [])
+    }, [id])
 
    
    console.log("data",data, data.titile);

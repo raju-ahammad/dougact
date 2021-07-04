@@ -1,5 +1,5 @@
 import React from "react"
-import MeshLine from "../Animation/MeshLine"
+import BoxAnim from "../Animation/BoxAnim"
 
 const Blog = () => {
     
@@ -7,7 +7,7 @@ const Blog = () => {
         
         <div>
           Hello BLog
-          <MeshLine/>
+         <BoxAnim/>
         </div>
         
     )

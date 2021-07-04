@@ -25,7 +25,9 @@ canvas {
 }
 .home__meshline {
     position: absolute;
-    z-index: 3;
-    width: 100%;
-    clip-path: polygon(30% 20%, 32% 83%, 71% 46%);
+    z-index: 1;
+    width: 80%;
+ 
 }
+
+

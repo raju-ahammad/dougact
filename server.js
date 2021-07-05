@@ -27,19 +27,20 @@ app.get('/', (req, res) => {
   })
 
 // *************** connect mongodb **********************
-// const URI = process.env.MONGO_URI;
+
+const URI = process.env.MONGO_URI;
 
 
-// mongoose.connect(URI, {
-//     useCreateIndex: true,
-//     useFindAndModify: false,
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// }, err => {
-//     if(err) throw err;
-//     console.log("connected to mongo db");
+mongoose.connect(URI, {
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}, err => {
+    if(err) throw err;
+    console.log("connected to mongo db");
   
-// })
+})
 
 
 

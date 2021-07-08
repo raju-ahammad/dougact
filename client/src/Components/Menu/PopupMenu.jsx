@@ -25,9 +25,12 @@ const PopupMenu = () => {
                        <img src={ logo } alt="logo" />
                    </div>
                </div>
-               <div className="popup__navmenu"> <MobileMenu/> </div>
+               <div className="popup__navmenu"> 
+                    <p className="headline__text">content</p>
+                    <MobileMenu/> 
+                </div>
                <div className="popup__headlines">
-                   <h2 className="headline__text"> hedlines</h2>
+                   <p className="headline__text"> hedlines</p>
                    <div className="headline_wrapper">
                         {
                             blogData.map(data => (

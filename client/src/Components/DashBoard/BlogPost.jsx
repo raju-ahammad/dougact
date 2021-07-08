@@ -3,6 +3,7 @@ import axios from 'axios'
 import './dasboard.css'
 import { useHistory } from 'react-router-dom'
 import Logo from '../Button/Logo'
+import SideBar from '../Menu/SideBar'
 const initialState = {
     title: "", 
     image: "",
@@ -87,10 +88,12 @@ const BlogPost = () => {
         return null;
       };
     
-
+      
     return (
         <div className="work__post">
              <Logo/>
+             <div className="dashBoard__wrapper">
+             <SideBar/>
             <div className="work__form">
                 <h2 className="workpost__title">Blog Post Here</h2>
             <form onSubmit={onSubmit}>
@@ -110,7 +113,8 @@ const BlogPost = () => {
                 
                 <div className="form-group">
                     <label htmlFor="desc">Description</label>
-                    <input type="text" name="description" value={description} placeholder="description" onChange={handleChange} required id="desc" className="form-cntrol"/>
+                    <textarea type="text" name="description" value={description} placeholder="description" onChange={handleChange} required id="desc" className="form-cntrol"/>
+           
                 </div>
                 {
                     !loading ? <button type="submit" className="btn"> 
@@ -125,6 +129,7 @@ const BlogPost = () => {
                 </div>
                 ) : null}
             </form>
+            </div>
             </div>
         </div>
     )

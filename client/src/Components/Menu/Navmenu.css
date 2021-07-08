@@ -75,16 +75,9 @@ img {
     width: 100%;
 }
 
-.bars__icon {
-    position: absolute;
-    background: transparent;
-    width: 20%;
-    top: 10%;
-    left: 10%;
-}
 
 .bars__icon {
-    position: absolute;
+    position: fixed;
     background: #fff;
     top: 0%;
     left: 0%;

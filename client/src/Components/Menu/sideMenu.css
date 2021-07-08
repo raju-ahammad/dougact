@@ -1,0 +1,11 @@
+.sideMenu {
+    background-color: teal;
+    width: 30%;
+    height: 100vh;
+    color: #fff;
+    padding: 8% 5%;
+}
+.sideMenu a {
+    color: #fff;
+    text-decoration: none;
+}

@@ -36,6 +36,7 @@
 .popup__navmenu {
     background: #fff;
     width: 48%;
+    padding: 8% 5% 0;
     
 }
 
@@ -79,4 +80,22 @@
     padding: 2px 16px;
     border-radius: 2px;
     font-size: 14px;
+}
+
+.headline__text {
+    color: gray;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    margin-left: 45px;
+}
+
+.headline__text::after {
+    content: "";
+    position: absolute;
+    width: 7%;
+    background: gray;
+    height: 2px;
+    left: -44px;
+    top: 50%;
 }

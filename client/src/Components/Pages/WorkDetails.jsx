@@ -44,6 +44,7 @@ const WorkDetails = () => {
                 <LiquidBuble />
                 
              </div>
+             
              {
                     !data ?  "not found" 
                     : <div className="details">

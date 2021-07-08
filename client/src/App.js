@@ -3,6 +3,8 @@ import PopupMenu from './Components/Menu/PopupMenu'
 import Router from './router'
 import useToken from '../src/Components/Utils/useToken.js'
 import axios from 'axios';
+import DashboardRouter from './DashboardRouter';
+import { BrowserRouter } from 'react-router-dom';
 
 export const MyContext = createContext({});
 
@@ -42,14 +44,19 @@ function App() {
    ;
   
   return (
+    <BrowserRouter>
     <MyContext.Provider value={provider}>
     <div className="App">
       <div  onClick={menuHandle} className="bars__icon"><i className="fal fa-bars"></i></div>
       <PopupMenu />
      
       <Router/>
+      <div>
+        <DashboardRouter/>
+      </div>
     </div>
     </MyContext.Provider>
+    </BrowserRouter>
   );
 }
 

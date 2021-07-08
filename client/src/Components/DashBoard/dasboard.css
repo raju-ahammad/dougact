@@ -1,15 +1,12 @@
-.work__form {
-    margin-top: 15%;
-    padding: 0 8%;
-}
+
 .work__form h2.workpost__title {
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .work__form form {
     box-shadow: 0px 0px 16px #aba8a8;
-    padding: 5%;
+    padding: 6%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,4 +44,26 @@ button.btn {
 
 .work__form form input#image {
     box-shadow: 0px 0px 2px black;
+}
+
+.dashBoard__wrapper {
+    display: flex;
+    
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  
+  .work__form {
+    padding: 5% 5% 0;
+    width: 68%;
+  }
+
+textarea#desc {
+    width: 85%;
+    height: 100px;
+}
+
+.dashboard__content {
+    width: 70%;
 }

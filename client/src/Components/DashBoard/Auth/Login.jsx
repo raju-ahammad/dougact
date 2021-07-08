@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useContext, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+
 import { isEmail } from './validate'
 import { showErrorMessage, showSuccessMessage } from './Notification'
 import { MyContext } from '../../../App'

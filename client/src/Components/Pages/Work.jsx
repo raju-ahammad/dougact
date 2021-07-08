@@ -36,7 +36,7 @@ const Work = () => {
             <div className="card__wraper">
               
                 {
-                    
+                loading ? <div>Loading........</div>:   
                     workData.map((data) =>(
                         <div className="card__list" key={data._id}>
                             <div className="work__image"><Link to={`/work/${data._id}`}><img src={ data.image } alt="work-img"/></Link> </div>

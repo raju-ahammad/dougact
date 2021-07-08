@@ -2,20 +2,12 @@ const User = require('../models/userModel')
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-
-const validateLoginInput = require('../utils/validateLoginInput')
-const validateRegisterInput = require("../utils/validateRegisterInput")
-const keys = process.env.JWT_SECRET_KEY
+const keys = 'secret'
 
 const userController = {
 
     registerUser: (req, res) => {
-      //   // Form validation
-      // const { errors, isValid } = validateRegisterInput(req.body);
-      // // Check validation
-      //   if (!isValid) {
-      //     return res.status(400).json(errors);
-      //   }
+     
       console.log("calling");
       User.findOne({ email: req.body.email }).then(user => {
           if (user) {

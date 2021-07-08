@@ -17,17 +17,17 @@ const initialState = {
 
 const WorkDetails = () => {
     const [data, setData] = useState(initialState)
-    const [loading, setLoading] = useState(false)
-    const { _id, title, image, video, description } = data
+    
+    const {  title, video, description } = data
     const param = useParams()
    
     const id = param.id
   
     const fetcWorkData = async () => {
-        setLoading(true)
+        
         const res = await axios(`/api/works/${id}`)
         setData(res.data)
-        setLoading(false)
+        
     }
 
     useEffect(() => {

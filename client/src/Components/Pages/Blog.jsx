@@ -1,8 +1,7 @@
 import ParticleAnim from "../Animation/ParticleAnim"
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./work.css"
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { MyContext } from "../../App";
 
 

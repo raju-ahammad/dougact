@@ -2,7 +2,10 @@ const User = require('../models/userModel')
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const keys = 'secret'
+
+const validateLoginInput = require('../utils/validateLoginInput')
+const validateRegisterInput = require("../utils/validateRegisterInput")
+const keys = process.env.JWT_SECRET_KEY
 
 const userController = {
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './dasboard.css'
 import { useHistory } from 'react-router-dom'
+import Logo from '../Button/Logo'
 const initialState = {
     title: "",
     worksimage: "",
@@ -91,19 +92,23 @@ const WorkPost = () => {
 
     return (
         <div className="work__post">
-            Hello work post
+            <Logo/>
+
+            <div className="work__form">
+                <h2 className="workpost__title">Work Post Here</h2>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label htmlFor="title">Title</label>
                     <input type="text" name="title" value={title} placeholder="Title" onChange={handleChange} required id="title" className="form-cntrol"/>
                 </div>
                 <div className="form-group">
-                    <div className="custom-file">
-                        <input type="file" onChange={imageChangeHandle} name="file" id="image" className="custom__file-input"/>
-                    </div>
-                    <label className="custom-file-label" htmlFor="image">
+                <label className="custom-file-label" htmlFor="image">
                         {workimage ? fileData() : "Choose File"}
                     </label>
+                    
+                    <input type="file" onChange={imageChangeHandle} name="file" id="image" className="custom__file-input"/>
+                    
+                    
                 </div>
                 <div className="form-group">
                     <label htmlFor="video">Video Url</label>
@@ -126,6 +131,7 @@ const WorkPost = () => {
                 </div>
                 ) : null}
             </form>
+            </div>
         </div>
     )
 }

@@ -4,6 +4,8 @@
     z-index: 9;
     width: 100%;
     height: 100vh;
+    top: 0;
+    
 }
 
 .popup__content {
@@ -33,14 +35,14 @@
 }
 .popup__navmenu {
     background: #fff;
-    width: 44%;
-    border: 1px solid gray;
+    width: 48%;
+    
 }
 
 .popup__headlines {
-    background: #fff;
-    border: 1px solid gray;
-    width: 40%;
+    background: #e4e3e3;
+    width: 42%;
+    padding: 8% 4%;
 }
 
 .close__icon {
@@ -60,4 +62,21 @@
 
 .popupBtn {
     display: block;
+}
+.headline_wrapper .title {
+    background: #fff;
+    padding: 3%;
+    margin-top: 5%;
+}
+.headline_wrapper .title p {
+    margin: 0;
+    padding: 0;
+}
+
+.headline_wrapper .title p span {
+    background: #000;
+    color: #fff;
+    padding: 2px 16px;
+    border-radius: 2px;
+    font-size: 14px;
 }

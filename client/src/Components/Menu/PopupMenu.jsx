@@ -1,17 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./PopupMenu.css"
 import logo from '../../Assets/Images/LogoBlack.png'
 import MobileMenu from './MobileMenu'
 import { MyContext } from '../../App'
 
-
-
 const PopupMenu = () => {
 
-    const {close, closeBtnHandle, value} = useContext(MyContext)
-    console.log(close ,"Btn");
-    console.log( closeBtnHandle ,"BtnHandle");
-
+    const context = useContext(MyContext)
+    const {close, closeBtnHandle, value, blogData, fetchBlogData} = context
+   
+    useEffect(() => {
+        fetchBlogData()
+    }, [])
     return (
         <div className={`popup__menu ${close} ${value}`} >
            <div className="popup__content">
@@ -26,7 +26,19 @@ const PopupMenu = () => {
                    </div>
                </div>
                <div className="popup__navmenu"> <MobileMenu/> </div>
-               <div className="popup__headlines">headline</div>
+               <div className="popup__headlines">
+                   <h2 className="headline__text"> hedlines</h2>
+                   <div className="headline_wrapper">
+                        {
+                            blogData.map(data => (
+                                <div key={data._id} className="title">
+                                    <p> <span>info</span> {data.createdAt}</p>
+                                    <p>{ data.title }</p>
+                                </div>
+                            ))
+                        }
+                    </div>
+               </div>
            </div>
         </div>
     )

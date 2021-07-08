@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import "./work.css"
 import axios from 'axios';
 import BoxAnim from '../Animation/BoxAnim';
+import Logo from '../Button/Logo';
 const initialState = {
     _id: "",
     title: "",
@@ -34,6 +35,7 @@ const BlogDetails = () => {
 
     return (
         <div className="blogDetails">
+            <Logo/>
             
              <div className="blog__details_anim">
                 <BoxAnim />

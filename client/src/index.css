@@ -27,3 +27,11 @@ body {
   user-select: none;
   background: white;
 }
+
+.main__logo {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 26%;
+  right: 0px;
+}

@@ -4,33 +4,9 @@ import "./work.css"
 
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Logo from '../Button/Logo';
 
 
-// export const workData = [
-//     {
-//       "id": "1",
-//       "title": "【生産性UP】モーション資料のご案内",
-//       "description":"Lady with a red umbrella",
-//       "link":"https://www.youtube.com/watch?v=wIpiEjbT5i0",
-//       "image": work1
-//     },
-//     {
-//       "id": "2",
-//       "title": "【生産性UP】モーション資料のご案内",
-//       "description":"Flowers and some fruits",
-//       "link": "https://youtu.be/ivEDgFVZYnI",
-//       "image": work2
-//     },
-//     {
-//       "id": "3",
-//       "title": "【生産性UP】モーション資料のご案内",
-//       "description":"Beautiful scenery",
-//       "link": "https://www.youtube.com/watch?v=2zAORucfyTs",
-//       "image": work3
-//     }
-    
-    
-// ]
 const Work = () => {
 
     const [workData, setWorkData] = useState([])
@@ -51,6 +27,7 @@ const Work = () => {
     
     return (
         <div className="work">
+            <Logo/>
             
            <div className="liquid__buble">
                 <LiquidBuble />

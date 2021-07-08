@@ -30,4 +30,21 @@ canvas {
     clip-path: polygon(29% 15%, 31% 87%, 91% 46%);
 }
 
+.company__text {
+    margin-left: 20%;
+}
 
+.company__text p span {
+    font-size: 17px;
+    font-weight: 700;
+    margin-right: 7px;
+}
+.about__list ul {
+    padding: 0;
+    margin: 0;
+}
+
+.about__list ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}

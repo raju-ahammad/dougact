@@ -5,6 +5,7 @@ import LiquidBuble from '../Animation/LiquidBuble'
 import ReactPlayer from 'react-player';
 import "./work.css"
 import axios from 'axios';
+import Logo from '../Button/Logo';
 const initialState = {
     _id: "",
     title: "",
@@ -37,6 +38,7 @@ const WorkDetails = () => {
 
     return (
         <div className="workDetails">
+            <Logo/>
             
              <div className="liquid__buble">
                 <LiquidBuble />

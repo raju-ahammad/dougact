@@ -1,26 +1,20 @@
 import ParticleAnim from "../Animation/ParticleAnim"
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./work.css"
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { MyContext } from "../../App";
 
 
 const Blog = () => {
 
-    const [blogData, setBlogData] = useState([])
-    const [loading, setLoading] = useState(false)
-
-    const fetchData = async () => {
-        setLoading(true)
-        const res = await axios.get('/api/blog')
-        setBlogData(res.data)
-        setLoading(false)
-    }
+    const blogContext = useContext(MyContext)
+    const { blogData, loading, fetchBlogData } = blogContext
 
     useEffect(() => {
-        fetchData()
+        fetchBlogData()
     }, [])
-    console.log(blogData);
+    
     
     return (
         <div className="work">

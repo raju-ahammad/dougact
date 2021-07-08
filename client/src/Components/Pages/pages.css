@@ -27,7 +27,7 @@ canvas {
     position: absolute;
     z-index: 1;
     width: 80%;
- 
+    clip-path: polygon(29% 15%, 31% 87%, 91% 46%);
 }
 
 

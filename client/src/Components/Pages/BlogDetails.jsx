@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import LiquidBuble from '../Animation/LiquidBuble'
-
-import ReactPlayer from 'react-player';
 import "./work.css"
 import axios from 'axios';
+import BoxAnim from '../Animation/BoxAnim';
 const initialState = {
     _id: "",
     title: "",
     image: "",
-    video: "",
     description: ""
 }
 
 
-const WorkDetails = () => {
+const BlogDetails = () => {
     const [data, setData] = useState(initialState)
     const [loading, setLoading] = useState(false)
-    const { _id, title, image, video, description } = data
+    const { _id, title, image, description } = data
     const param = useParams()
    
     const id = param.id
   
     const fetcWorkData = async () => {
         setLoading(true)
-        const res = await axios(`/api/works/${id}`)
+        const res = await axios(`/api/blog/${id}`)
         setData(res.data)
         setLoading(false)
     }
@@ -36,23 +33,18 @@ const WorkDetails = () => {
    
 
     return (
-        <div className="workDetails">
+        <div className="blogDetails">
             
-             <div className="liquid__buble">
-                <LiquidBuble />
-                
+             <div className="blog__details_anim">
+                <BoxAnim />
+             </div>
+             <div className="blog__image-banner">
+                 <img src={image} alt="blog img" />
              </div>
              {
                     !data ?  "not found" 
                     : <div className="details">
-                         <ReactPlayer
-                            url={video}
-                            playing
-                            loop
-                            muted
-                            width="100%"
-                            height="450px"
-                        /> 
+                        
                         <div className="video__desc">
                             <p>{ title }</p>
                             <p>{ description }</p>
@@ -64,4 +56,4 @@ const WorkDetails = () => {
     )
 }
 
-export default WorkDetails
+export default BlogDetails

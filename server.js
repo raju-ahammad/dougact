@@ -3,8 +3,10 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
-
+const passport = require("passport");
 var fs = require("fs");
+
+
 
 const app = express();
 
@@ -16,13 +18,19 @@ app.use(cors())
 app.use(cookieParser())
 
 
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport config
+require("./utils/passport")(passport);
+
 // *************** Routes **********************
 
+app.use('/api', require('./routes/imageUploadRoute'))
 app.use('/api', require('./routes/workRoute'))
+app.use('/api', require('./routes/blogRoute'))
+app.use('/api/users', require('./routes/userRoute'))
 
-app.get('/', (req, res) => {
-    res.send('Hello Dougcat!')
-  })
 
 // *************** connect mongodb **********************
 

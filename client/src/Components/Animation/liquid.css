@@ -71,4 +71,13 @@
     top: 0;
     z-index: -1;
   }
+  .particle {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    z-index: -1;
+    left: 20%;
+    top: 0;
   
+
+  }

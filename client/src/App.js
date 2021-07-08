@@ -1,14 +1,15 @@
 import React, { createContext, useState } from 'react'
+import Login from './Components/DashBoard/Auth/Login';
 import PopupMenu from './Components/Menu/PopupMenu'
 import Router from './router'
-
+import useToken from '../src/Components/Utils/useToken.js'
 export const MyContext = createContext({});
-
 
 function App() {
   const [value, setValue] = useState("closeBtn")
-    const [close, setClose] = useState("")
-
+  const [close, setClose] = useState("")
+ 
+  const { token, setToken } = useToken();
 
     const menuHandle = () => {
         setValue("popupBtn")
@@ -21,9 +22,15 @@ function App() {
     const provider = {
       value, setValue,
       close, setClose,
-      menuHandle,closeBtnHandle
-
+      menuHandle,closeBtnHandle,
+      token, setToken
     }
+
+    // if (!token) {
+      
+    //   return <Login setToken={setToken} />
+    // }
+    // console.log(token);
   
   return (
     <MyContext.Provider value={provider}>

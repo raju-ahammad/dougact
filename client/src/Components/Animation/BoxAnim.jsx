@@ -35,6 +35,17 @@ export default function BoxAnim() {
       <Box position={[1, 0, 0]} />
       <Box position={[-0.5, 1.5, -1]} />
       <Box position={[-0.1, -1, 0]} />
+      <Box position={[-0.1, -2, 0]} />
+      <Box position={[-0.1, -3, 0]} />
+      <Box position={[-0.1, 4, 0]} />
+      <Box position={[1, 4, 0]} />
+      <Box position={[-0.1, 3, 0]} />
+      <Box position={[1, 2, 0]} />
+      <Box position={[0.7, 1, 0]} />
+      <Box position={[0.4, 0.5, 0]} />
+      <Box position={[-1, -1.5, 0]} />
+      <Box position={[1, -1.6, 0]} />
+      <Box position={[-0.5, -2.8, 0]} />
     </Canvas>
   )
 }

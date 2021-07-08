@@ -113,4 +113,6 @@ img {
 .scroll-horizontal div {
     z-index: 1;
 }
-
+.menu__content .regular__nav a img {
+  height: 223px;
+}

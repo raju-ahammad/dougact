@@ -1,10 +1,10 @@
 const router = require('express').Router()
 
-const imageUpload = require('../middleware/imageUpload')
 
-const worksController = require('../controllers/workController')
+const worksController = require('../controllers/worksController')
 
 router.get('/works', worksController.getWorks);
-router.post('/work', imageUpload.single("picture") , worksController.postWorks)
+router.get('/works/:id', worksController.getSigleWorks);
+router.post('/work',  worksController.postWorks)
 
 module.exports = router;

@@ -38,6 +38,38 @@ const worksController = {
             return res.status(500).json({msg: err.message}) 
         }
     },
+    updateWork: async (req, res) => {
+        try {
+            const id = req.params.id
+            const work = await Works.findOneAndUpdate({
+                _id: id,
+            },
+            req.body,
+            {
+                new: true
+            }
+            )
+            console.log(work);
+            if (!work) return res.status(404).json({msg: "work not found"})
+            res.json(work)
+        } catch (err) {
+            return res.status(500).json({msg: err.message}) 
+        }
+    },
+    deleteWork: async (req, res) => {
+        const id = req.params.id;
+        try {
+            const work = await Works.findOneAndDelete({
+                _id: id,
+            })
+            if (!work) return res.status(404).json({msg: "work not found"})
+
+            res.json({msg: "Work deleted"})
+            res.send(work)
+        } catch (err) {
+            return res.status(500).json()
+        }
+    }
 
 }
 

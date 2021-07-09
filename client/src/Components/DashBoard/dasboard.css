@@ -67,3 +67,28 @@ textarea#desc {
 .dashboard__content {
     width: 70%;
 }
+
+
+  .post__list {
+    width: 70%;
+    padding: 9% 5% 0;
+}
+
+.delete__action {
+    cursor: pointer;
+}
+
+.create__post__btn {
+    margin-bottom: 5%;
+}
+
+.create__post__btn a {
+    text-decoration: none;
+    background: linear-gradient( 90deg, rgba(65,133,219,1) 0%, rgba(43,76,204,1) 50%, rgba(0,212,255,1) 100%);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 18px;
+    margin-bottom: 5%;
+    border-radius: 3px;
+    font-family: Montserrat;
+}

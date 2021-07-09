@@ -25,7 +25,7 @@ const WorkDetails = () => {
   
     const fetcWorkData = async () => {
         
-        const res = await axios(`/api/works/${id}`)
+        const res = await axios.get(`/api/works/${id}`)
         setData(res.data)
         
     }

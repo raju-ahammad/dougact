@@ -1,27 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import LiquidBuble from '../Animation/LiquidBuble'
 import "./work.css"
-
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import Logo from '../Button/Logo';
+import { MyContext } from '../../App';
 
 
 const Work = () => {
 
-    const [workData, setWorkData] = useState([])
-    const [loading, setLoading] = useState(false)
+    const context = useContext(MyContext)
 
-    const fetchData = async () => {
-        const res = await axios.get('/api/works')
-        console.log(res);
-        setLoading(true)
-        setWorkData(res.data)
-        setLoading(false)
-    }
-
+    const { workData, fetchWorkData, loading} = context
     useEffect(() => {
-        fetchData()
+        fetchWorkData()
     }, [])
     console.log(workData);
     

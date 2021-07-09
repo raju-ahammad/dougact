@@ -21,7 +21,7 @@ const BlogDetails = () => {
     const id = param.id
   
     const fetcWorkData = async () => {
-        const res = await axios(`/api/blog/${id}`)
+        const res = await axios.get(`/api/blog/${id}`)
         setData(res.data)
         
     }

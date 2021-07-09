@@ -35,9 +35,41 @@ const BlogController = {
             
             res.json(blog)
         } catch (err) {
+            
+        }
+    },
+    updateBlog: async (req, res) => {
+        try {
+            const id = req.params.id
+            const blog = await Blogs.findOneAndUpdate({
+                _id: id,
+            },
+            req.body,
+            {
+                new: true
+            }
+            )
+            console.log(blog);
+            if (!blog) return res.status(404).json({msg: "Blog not found"})
+            res.json(blog)
+        } catch (err) {
             return res.status(500).json({msg: err.message}) 
         }
     },
+    deleteBlog: async (req, res) => {
+        const id = req.params.id;
+        try {
+            const blog = await Blogs.findOneAndDelete({
+                _id: id,
+            })
+            if (!blog) return res.status(404).json({msg: "Blog not found"})
+
+            res.json({msg: "Blog deleted"})
+            res.send(blog)
+        } catch (err) {
+            return res.status(500).json()
+        }
+    }
 
 }
 

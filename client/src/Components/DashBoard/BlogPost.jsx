@@ -49,12 +49,11 @@ const BlogPost = () => {
             let formData =  new FormData()
             formData.append('picture', file)
             console.log(formData);
-
+            setLoading(true)
             const res = await axios.post("/api/image", formData)
             console.log(res);
-
-        
             setWorkImage(res.data.image.image)
+            setLoading(false)
         } catch (error) {
             console.log(error);
         }
@@ -93,8 +92,10 @@ const BlogPost = () => {
         <div className="work__post">
              <Logo/>
              <div className="dashBoard__wrapper">
-             <SideBar/>
+                <SideBar/>
+
             <div className="work__form">
+                
                 <h2 className="workpost__title">Blog Post Here</h2>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
@@ -103,7 +104,7 @@ const BlogPost = () => {
                 </div>
                 <div className="form-group">
                     <label className="custom-file-label" htmlFor="image">
-                        {workimage ? fileData() : "Choose File"}
+                        { loading ? <div className="loading">Uploading image please wait</div> : workimage ?  fileData() : "Choose File"}
                     </label>
                     
                     <input type="file" onChange={imageChangeHandle} name="file" id="image" className="custom__file-input"/>
@@ -113,15 +114,13 @@ const BlogPost = () => {
                 
                 <div className="form-group">
                     <label htmlFor="desc">Description</label>
-                    <textarea type="text" name="description" value={description} placeholder="description" onChange={handleChange} required id="desc" className="form-cntrol"/>
-           
+                    <textarea type="text" name="description" value={description} placeholder="description" onChange={handleChange} required id="desc" className="form-cntrol" />
                 </div>
-                {
-                    !loading ? <button type="submit" className="btn"> 
+                    
+                <button type="submit" className="btn"> 
                     Submit
-                </button>:  "loading....."
-                }
-                
+                </button>
+             
                 {error ? (
                 <div className="text-danger">
                     {" "}

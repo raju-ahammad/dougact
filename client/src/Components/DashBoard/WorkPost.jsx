@@ -30,11 +30,11 @@ const WorkPost = () => {
     const postWokrsInfo = async () => {
         try {
             const res = await axios.post("/api/work", {title, image: workimage, video, description})
-            setLoading(true)
+            
             setPostWork({...postWork, res})
             console.log(res);
             setPostWork(initialState)
-            setLoading(false)
+           
             history.push('/work')
         } catch (err) {
             console.log(err);
@@ -50,12 +50,11 @@ const WorkPost = () => {
             let formData =  new FormData()
             formData.append('picture', file)
             console.log(formData);
-
+            setLoading(true)
             const res = await axios.post("/api/image", formData)
             console.log(res);
-
-        
             setWorkImage(res.data.image.image)
+            setLoading(false)
         } catch (error) {
             console.log(error);
         }
@@ -107,7 +106,7 @@ const WorkPost = () => {
                 </div>
                 <div className="form-group">
                 <label className="custom-file-label" htmlFor="image">
-                        {workimage ? fileData() : "Choose File"}
+                        { loading ? <div className="loading">Uploading image please wait</div> : workimage ? fileData() : "Choose File"}
                     </label>
                     
                     <input type="file" onChange={imageChangeHandle} name="file" id="image" className="custom__file-input"/>
@@ -123,11 +122,11 @@ const WorkPost = () => {
                     <textarea type="text" name="description" value={description} placeholder="description" onChange={handleChange} required id="desc" className="form-cntrol"/>
                     
                 </div>
-                {
-                    !loading ? <button type="submit" className="btn"> 
+             
+                <button type="submit" className="btn"> 
                     Submit
-                </button>:  "loading....."
-                }
+                </button>
+            
                 
                 {error ? (
                 <div className="text-danger">

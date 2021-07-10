@@ -3,6 +3,7 @@ import "./PopupMenu.css"
 import logo from '../../Assets/Images/LogoBlack.png'
 import MobileMenu from './MobileMenu'
 import { MyContext } from '../../App'
+import { Link } from 'react-router-dom'
 
 const PopupMenu = () => {
 
@@ -34,10 +35,12 @@ const PopupMenu = () => {
                    <div className="headline_wrapper">
                         {
                             blogData.map(data => (
-                                <div key={data._id} className="title">
-                                    <p> <span>info</span> {data.createdAt}</p>
-                                    <p>{ data.title }</p>
-                                </div>
+                                <Link onClick={closeBtnHandle} to={`/blog/${data._id}`}>
+                                    <div key={data._id} className="title">
+                                        <p> <span>info</span> {data.createdAt}</p>
+                                        <p>{ data.title }</p>
+                                    </div>
+                                </Link>
                             ))
                         }
                     </div>

@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { MyContext } from '../../App'
@@ -13,6 +14,17 @@ const ListWorksPost = () => {
     useEffect(() => {
         fetchWorkData()
     }, [])
+
+    const deleteHandle = async (id) => {
+        try {
+            if (window.confirm("Are you sure you to delete this account !")) {
+                await axios.delete(`/api/blog/delete/${id}`)
+                fetchWorkData()
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return (
         <div className="list__blog">
             <Logo/>
@@ -36,7 +48,7 @@ const ListWorksPost = () => {
                                     <td>{data.title}</td>
                                     <td> <div className="action__list">
                                         <Link to={`/dashboard/work/edit/${data._id}`} className="edit__action mr-3"><i className="fas fa-edit"></i></Link>
-                                        <p className="delete__action mx-3 d-inline pointer"><i className="text-danger far fa-trash-alt"></i></p>
+                                        <p className="delete__action mx-3 d-inline pointer" onClick={() => deleteHandle(data._id)}><i className="text-danger far fa-trash-alt"></i></p>
                                     </div> </td>
                                 </tr>
                             ))

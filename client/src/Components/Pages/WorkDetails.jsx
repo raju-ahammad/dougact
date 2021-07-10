@@ -57,8 +57,8 @@ const WorkDetails = () => {
                             height="450px"
                         /> 
                         <div className="video__desc">
-                            <p>{ title }</p>
-                            <p>{ description }</p>
+                            <p className="blog__title">{ title }</p>
+                            <p className="blog__description">{ description }</p>
                         </div>
                         
                     </div>

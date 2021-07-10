@@ -36,9 +36,9 @@ const BlogDetails = () => {
         <div className="blogDetails">
             <Logo/>
             
-             <div className="blog__details_anim">
+             {/* <div className="blog__details_anim">
                 <BoxAnim />
-             </div>
+             </div> */}
              <div className="blog__image-banner">
                  <img src={image} alt="blog img" />
              </div>
@@ -47,8 +47,8 @@ const BlogDetails = () => {
                     : <div className="details">
                         
                         <div className="video__desc">
-                            <p>{ title }</p>
-                            <p>{ description }</p>
+                            <p className="blog__title">{ title }</p>
+                            <p className="blog__description">{ description }</p>
                         </div>
                         
                     </div>

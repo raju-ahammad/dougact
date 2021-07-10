@@ -26,6 +26,7 @@ body,
 body {
   user-select: none;
   background: white;
+  box-sizing: border-box;
 }
 
 .main__logo {

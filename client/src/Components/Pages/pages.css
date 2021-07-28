@@ -48,3 +48,27 @@ canvas {
     list-style: none;
     margin-bottom: 5px;
 }
+.home__moilemenu {
+    position: absolute;
+    z-index: 99;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .home .navmenu {
+        display: none;
+    }
+    .home .home__meshline {
+        display: none;
+    }
+    .home__moilemenu {
+        display: block;
+    }
+    .home__moilemenu a {
+        color: #fff !important;
+        font-size: 48px !important;
+    }
+}

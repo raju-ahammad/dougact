@@ -15,6 +15,7 @@ const app = express();
 // ***************** use middleware *****************
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "./client/build")))
 app.use(cors())
 app.use(cookieParser())
 
@@ -25,12 +26,19 @@ app.use(passport.initialize());
 // Passport config
 require("./utils/passport")(passport);
 
-// *************** Routes **********************
 
+
+
+// *************** Routes **********************
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build/index.html'))
+  })
 app.use('/api', require('./routes/imageUploadRoute'))
 app.use('/api', require('./routes/workRoute'))
 app.use('/api', require('./routes/blogRoute'))
 app.use('/api/users', require('./routes/userRoute'))
+
+
 
 
 // *************** connect mongodb **********************

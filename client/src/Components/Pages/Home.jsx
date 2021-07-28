@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 import videoURL from "../../Assets/Video/background.mp4"
 import "./pages.css"
 import NavMenu from '../Menu/NavMenu';
-
+import MobileMenu from '../Menu/MobileMenu'
 import BoxAnim from "../Animation/BoxAnim"
 const Home = () => {
 
@@ -26,6 +26,7 @@ const Home = () => {
             style={{ position: "absolute "}}
             />
             <NavMenu />
+           <div className="home__moilemenu" ><MobileMenu/></div>
         </div>
     )
 }

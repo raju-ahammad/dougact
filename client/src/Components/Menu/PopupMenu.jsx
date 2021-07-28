@@ -35,8 +35,8 @@ const PopupMenu = () => {
                    <div className="headline_wrapper">
                         {
                             blogData.map(data => (
-                                <Link onClick={closeBtnHandle} to={`/blog/${data._id}`}>
-                                    <div key={data._id} className="title">
+                                <Link key={data._id} onClick={closeBtnHandle} to={`/blog/${data._id}`}>
+                                    <div  className="title">
                                         <p> <span>info</span> {data.createdAt}</p>
                                         <p>{ data.title }</p>
                                     </div>

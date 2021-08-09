@@ -4,6 +4,9 @@ import logo from '../../Assets/Images/LogoBlack.png'
 import MobileMenu from './MobileMenu'
 import { MyContext } from '../../App'
 import { Link } from 'react-router-dom'
+import Moment from 'react-moment';
+import 'moment-timezone';
+
 
 const PopupMenu = () => {
 
@@ -37,7 +40,7 @@ const PopupMenu = () => {
                             blogData.map(data => (
                                 <Link key={data._id} onClick={closeBtnHandle} to={`/blog/${data._id}`}>
                                     <div  className="title">
-                                        <p> <span>info</span> {data.createdAt}</p>
+                                        <p> <span>info</span>  <Moment fromNow >{data.createdAt}</Moment> </p>
                                         <p>{ data.title }</p>
                                     </div>
                                 </Link>

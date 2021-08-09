@@ -7,7 +7,7 @@ img {
     display: flex;
     justify-content: space-between;;
     align-items: center;
-    margin-left: 5%;
+   
   }
   .tile-striped {
     background: transparent
@@ -83,7 +83,7 @@ img {
     left: 0%;
     width: 5rem;
     cursor: pointer;
-    z-index: 2;
+    z-index: 10;
 }
 .bars__icon i{ 
     text-align: center;
@@ -99,9 +99,13 @@ img {
     right: 2%;
     z-index: 1;
 }
-.home_contact p {
+.home_contact a {
     font-size: 22px;
     color: #fff;
+    text-decoration: none;
+}
+.home_contact a:hover {
+  color: #fff;
 }
 .scroll-horizontal div {
     z-index: 1;

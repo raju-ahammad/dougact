@@ -6,7 +6,7 @@ const Company = () => {
     return (
         <div className="company">
             <Logo/>
-            <div className="page__tittle"><h2>Blog</h2></div>
+            <div className="page__tittle"><h2>Company</h2></div>
             <div className="company__text">
                 <p><span>Representative:</span> Shuichiro Saito</p>
                 <p><span>Contact information:</span> info@dougact.com</p>

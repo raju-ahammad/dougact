@@ -43,7 +43,7 @@ const NavMenu = () => {
             
             <div className="logo__wrapper"><img src={logo} alt="Logo" /></div>
             <ScrollHorizontal>{exampleItems}</ScrollHorizontal>
-            <div className="home_contact"><p>CONTACT</p></div>
+            <div className="home_contact"><p><Link to='/company'>CONTACT</Link></p></div>
         </div>
       </section>
     );

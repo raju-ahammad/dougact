@@ -50,7 +50,7 @@ canvas {
 }
 .home__moilemenu {
     position: absolute;
-    z-index: 99;
+    z-index: 1;
     display: none;
     left: 50%;
     top: 50%;

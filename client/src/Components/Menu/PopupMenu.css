@@ -1,7 +1,7 @@
 .popup__menu {
     background: #fff;
     position: fixed;
-    z-index: 9;
+    z-index: -1;
     width: 100%;
     height: 100vh;
     top: 0;
@@ -57,12 +57,15 @@
 }
 
 .closeBtn {
-    display: none;
+    opacity: 0;
+    transition: all 0.3s ease-out;
 }
 
 
 .popupBtn {
-    display: block;
+    opacity: 1;
+    z-index: 11 !important;
+    transition: all 0.3s ease-out;
 }
 .headline_wrapper .title {
     background: #fff;

@@ -40,3 +40,16 @@ body {
 .loading {
   color: tomato;
 }
+h1,h2,h3  {
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+p {
+  font-family: 'Montserrat';
+}
+a {
+  font-family: 'Montserrat';
+}
+li {
+  font-family: 'Montserrat';
+}

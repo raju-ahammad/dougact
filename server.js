@@ -15,7 +15,7 @@ const app = express();
 // ***************** use middleware *****************
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "./client/build")))
+
 app.use(cors())
 app.use(cookieParser())
 
@@ -30,9 +30,19 @@ require("./utils/passport")(passport);
 
 
 // *************** Routes **********************
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build/index.html'))
+
+  app.use(express.static(path.join(__dirname, "./client/build")))
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, './client/build/index.html'), function(err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    })
   })
+
+
+
+
 app.use('/api', require('./routes/imageUploadRoute'))
 app.use('/api', require('./routes/workRoute'))
 app.use('/api', require('./routes/blogRoute'))

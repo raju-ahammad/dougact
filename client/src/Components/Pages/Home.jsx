@@ -4,15 +4,14 @@ import videoURL from "../../Assets/Video/background.mp4"
 import "./pages.css"
 import NavMenu from '../Menu/NavMenu';
 import MobileMenu from '../Menu/MobileMenu'
-import BoxAnim from "../Animation/BoxAnim"
 const Home = () => {
 
     return (
         <div className="home">
              
-            <div className="home__meshline">
+            {/* <div className="home__meshline">
                 <BoxAnim/>
-            </div>
+            </div> */}
             <div className="overlay">
                
             </div>

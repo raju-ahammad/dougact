@@ -7,10 +7,7 @@ const passport = require("passport");
 const path = require('path')
 var fs = require("fs");
 
-
-
 const app = express();
-
 
 // ***************** use middleware *****************
 
@@ -19,28 +16,16 @@ app.use(express.static(path.join(__dirname, './client/build')));
 app.use(cors())
 app.use(cookieParser())
 
-
 // Passport middleware
 app.use(passport.initialize());
 
 // Passport config
 require("./utils/passport")(passport);
 
-
-
-
-
-
-
-
-
 app.use('/api', require('./routes/imageUploadRoute'))
 app.use('/api', require('./routes/workRoute'))
 app.use('/api', require('./routes/blogRoute'))
 app.use('/api/users', require('./routes/userRoute'))
-
-
-
 
 // *************** connect mongodb **********************
 
@@ -58,8 +43,6 @@ mongoose.connect(URI, {
   
 })
 
-
-
 // Serve static assets if in production
 
     // Set static folder
@@ -68,9 +51,7 @@ mongoose.connect(URI, {
     app.get('*', (req, res) => {
       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
-
-
-
+    
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, ()=> {

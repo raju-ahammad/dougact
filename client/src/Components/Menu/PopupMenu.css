@@ -58,14 +58,14 @@
 
 .closeBtn {
     opacity: 0;
-    transition: all 0.3s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 
 .popupBtn {
     opacity: 1;
     z-index: 11 !important;
-    transition: all 0.3s ease-out;
+    transition: all 0.5s ease-out;
 }
 .headline_wrapper .title {
     background: #fff;

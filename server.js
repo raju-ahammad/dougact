@@ -15,7 +15,7 @@ const app = express();
 // ***************** use middleware *****************
 
 app.use(express.json());
-
+app.use(express.static(path.resolve(__dirname, './client/build')));
 app.use(cors())
 app.use(cookieParser())
 
@@ -31,14 +31,15 @@ require("./utils/passport")(passport);
 
 // *************** Routes **********************
 
-  app.use(express.static(path.join(__dirname, "./client/build")))
-  app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, './client/build/index.html'), function(err) {
-      if (err) {
-        res.status(500).send(err)
-      }
-    })
-  })
+// This middleware informs the express application to serve our compiled React files
+
+  app.use(express.static(path.join(__dirname, './client/build')));
+
+  app.get('', function (req, res) {
+      res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+  });
+
+
 
 
 

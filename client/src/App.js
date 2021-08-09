@@ -3,7 +3,6 @@ import PopupMenu from './Components/Menu/PopupMenu'
 import Router from './router'
 import useToken from '../src/Components/Utils/useToken.js'
 import axios from 'axios';
-import DashboardRouter from './DashboardRouter';
 import { BrowserRouter } from 'react-router-dom';
 
 export const MyContext = createContext({});
@@ -61,9 +60,7 @@ function App() {
         <PopupMenu />
       
         <Router/>
-        <div>
-          <DashboardRouter/>
-        </div>
+       
       </div>
       </MyContext.Provider>
     </BrowserRouter>

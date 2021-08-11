@@ -17,7 +17,7 @@ const Work = () => {
     useEffect(() => {
         fetchWorkData()
     }, [])
-    console.log(workData);
+   
     
     return (
         <div className="work">

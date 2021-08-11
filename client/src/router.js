@@ -47,8 +47,8 @@ const Router = () => {
                         <Route path="/work/:id" component={ WorkDetails } exact/>
                         <Route path="/dashboard"  component={ !token ? Login : Dashboard } exact/>
                         <Route path="/dashboard/workpost" component={!token ? Login : ListWorksPost } exact/>
-                        <Route path="/signup" component={ Registration } exact/>
-                        <Route path="/login" component={ Login } exact/>
+                        <Route path="/signup" component={ token ? Dashboard :  Registration } exact/>
+                        <Route path="/login" component={token ? Dashboard : Login } exact/>
                         <Route path="/dashboard/blogpost"  component={ !token ? Login : ListBlogPost } exact/>
                         <Route path="/dashboard/blog/create"  component={ !token ? Login : BlogPost } exact/>
                         <Route path="/dashboard/work/create"  component={ !token ? Login : WorkPost } exact/>

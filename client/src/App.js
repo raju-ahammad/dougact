@@ -34,7 +34,7 @@ function App() {
     }
     const fetchWorkData = async () => {
       const res = await axios.get('/api/works')
-      console.log(res);
+     
       setLoading(true)
       setWorkData(res.data)
       setLoading(false)

@@ -110,7 +110,9 @@
 }
 
 
-
+.popup__navmenu .mobile__logo {
+    display: none;
+}
 @media(max-width: 768px) {
     .popup__content {
         display: flex;
@@ -120,9 +122,9 @@
         width: 100%;
         flex-direction: column;
     }
-    .popup__menu {
+    .popupBtn {
         position: absolute;
-        z-index: 9;
+        z-index: 1;
         width: 100%;
         top: 0;
     }

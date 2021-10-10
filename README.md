@@ -22,4 +22,4 @@
 
 ## Run the React client only
 
-### `npm run client`
+### `npm start`
